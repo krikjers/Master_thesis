@@ -1,0 +1,48 @@
+# How to run the simulator
+1) Open "parameter_initialization.m"
+2) Under "%% Scenarios", uncomment the secnario to run. (All scenarios are implemented as a separate matlab file in the folder "TEST_SCENARIOS".
+3) Edit the simulation length by changing the variable "time_stop"
+4) Open "sim_scenarios.m" and run. This will create two matlab data files in the main folder. 
+These data files contain all simulated states. One datafile is for the scenario with only the SBMPC algorithm,
+the other data file is for the scenario with only the modified SBMPC algorithm.
+5) run "plot_text.m" for plotting
+
+
+If you want to use the analysis tool:
+1) copy the two matlab data files created from the simulation into the folder "Analysis_tool -> single_scenario if the simulation scenario has 1 obstacle ship
+and multi_scenario if the simulation scenario has > 1 obstacle ships.
+2) In the Analysis_tool folder, open "main_analysis_tool.m" and run.
+
+
+
+
+
+# Explanation of modules
+The simulator is divided into two folders: "SBMPC_intentions" and "SBMPC".
+In the "SBMPC" folder, the simulator with the SBMPC algorithm is implemented.
+In the "SBMPC_intentions" folder, the simulator with the modified SBMPC algorithm is implemented.
+
+
+Inside the simulators in the SBMPC and SBMPC_intentions folders, there are 3 modules:
+1) normal obstacle ships = obstacle ships without collision avoidance system
+2) SBMPC obstacle ships = obstacle ships with a collision avoidance system
+3) Own-ship
+
+
+Each ship type is implemented using LOS guidance and a feedback linearizing controller.
+Matlab classes are used for the implementation.
+
+
+
+
+# Notation used:
+x = position along north axis
+y = position along east axis
+psi = heading angle (clockwise positive)
+u =  speed in x direction
+v =  speed in y direction
+eta = [x,y,psi]
+nu = [u,v,r]
+
+
+
