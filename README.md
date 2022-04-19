@@ -1,5 +1,7 @@
 Master's thesis in Cybernetics and Robotics at NTNU.
 
+Can be downloaded from https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2780862
+
 The aim of the master's thesis was to determine if utilization of other vessels’ intentions can improve the
 performance of an existing short-term collision avoidance method; the Simulation-BasedModel Predictive Control (SBMPC) 
 algorithm by Johansen et al. (2016). 
